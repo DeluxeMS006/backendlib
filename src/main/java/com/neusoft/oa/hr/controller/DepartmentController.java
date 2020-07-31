@@ -45,7 +45,7 @@ public class DepartmentController {
 		return result;
 	}
 	@GetMapping(value="/list/all/page")
-	public Result<DepartmentModel> getListByAllWitgPage(@RequestParam(required=false,defaultValue="10") int rows,@RequestParam(required=false, defaultValue="1") int page) throws Exception {
+	public Result<DepartmentModel> getListByAllWithPage(@RequestParam(required=false,defaultValue="10") int rows,@RequestParam(required=false, defaultValue="1") int page) throws Exception {
 		Result<DepartmentModel> result=new Result<DepartmentModel>();
 		result.setCount(ds.getCountByAll());
 		result.setPage(ds.getPageCountByAll(rows));

@@ -9,8 +9,8 @@
 		<result property="code" column="DEPTCODE"/>
 		<result property="name" column="DEPTNAME"/>
 	</resultMap>
-
-  	<insert id="insert" parameterType="Department" keyProperty="no"   keyColumn="DEPTNO"  useGeneratedKeys="true">
+ 
+	<insert id="insert" parameterType="Department" keyProperty="no"   keyColumn="DEPTNO"  useGeneratedKeys="true">
 	insert into oa_department (DEPTCODE,DEPTNAME) values (#{code},#{name})
  	</insert>
   
@@ -37,6 +37,5 @@
  	<select id="selectByNo"  resultMap="DepartmentResultMap">
  	select * from oa_department where DEPTNO=#{no}
  	</select>
-
-
+  
 </mapper>
